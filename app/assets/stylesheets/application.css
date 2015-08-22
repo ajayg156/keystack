@@ -175,9 +175,11 @@ a.ui_button.small {
 
 #bottom {
     font-size: 14px;
-    margin-top: 20px;
+    margin-top: 170px;
     margin-bottom: 24px;
     color:#666666;
+    border-bottom: 2px solid #777777;
+  background-image: linear-gradient(to bottom, #305A81, #1367B3);
 }
 
 #bottom .inner_bottom {
