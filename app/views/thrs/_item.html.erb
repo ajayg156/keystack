@@ -28,7 +28,9 @@
     <div class="clear"></div>
     <div class="tags">
       <% cache("thrs/#{thr.id}/thr_tags") do %>
+      
         <% thr.tagnames.split(' ').each do |name| %>
+
           <%= tag_schema(name) %>
         <% end %>
       <% end %>

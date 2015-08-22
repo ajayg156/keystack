@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.17'
 
 gem 'thin'
-gem 'mysql2'
+gem 'pg'
 gem 'squeel'
 gem 'memcachier'
 gem 'dalli'
@@ -15,9 +15,7 @@ group :development do
   gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
   gem "twitter-bootstrap-rails"
 end
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+
 group :production do
   gem 'rails_12factor' # Added to avoid warnings on heroku
   gem 'newrelic_rpm'

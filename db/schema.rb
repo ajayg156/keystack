@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20140530201929) do
     t.datetime "created_at"
     t.datetime "undo_at"
     t.text     "extra"
-    t.integer  "undo",              :limit => 1, :default => 0
+    t.integer  "undo",              :limit => 2, :default => 0
   end
 
   add_index "activities", ["activityable_type", "activityable_id"], :name => "index_activities_on_activityable_type_and_activityable_id"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(:version => 20140530201929) do
     t.integer  "activity_id"
     t.integer  "value"
     t.datetime "created_at"
-    t.integer  "undo",        :limit => 1, :default => 0
+    t.integer  "undo",        :limit => 2, :default => 0
   end
 
   add_index "activity_points", ["activity_id"], :name => "index_activity_points_on_activity_id"
@@ -64,8 +64,8 @@ ActiveRecord::Schema.define(:version => 20140530201929) do
     t.integer  "vote_up",                  :default => 0
     t.integer  "vote_down",                :default => 0
     t.datetime "activity_at"
-    t.integer  "status",      :limit => 1, :default => 1
-    t.integer  "resolved",    :limit => 1
+    t.integer  "status",      :limit => 2, :default => 1
+    t.integer  "resolved",    :limit => 2
     t.datetime "created_at",                              :null => false
     t.datetime "updated_at",                              :null => false
   end
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(:version => 20140530201929) do
     t.integer  "vote_up",                       :default => 0
     t.integer  "vote_down",                     :default => 0
     t.datetime "activity_at"
-    t.integer  "status",           :limit => 1, :default => 1
+    t.integer  "status",           :limit => 2, :default => 1
     t.datetime "created_at",                                   :null => false
     t.datetime "updated_at",                                   :null => false
   end
@@ -164,7 +164,7 @@ ActiveRecord::Schema.define(:version => 20140530201929) do
     t.string   "slug"
     t.string   "name"
     t.integer  "quantity",                :default => 0
-    t.integer  "status",     :limit => 1, :default => 1
+    t.integer  "status",     :limit => 2, :default => 1
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
   end
@@ -186,7 +186,7 @@ ActiveRecord::Schema.define(:version => 20140530201929) do
     t.string   "tagnames"
     t.datetime "created_at",                                        :null => false
     t.datetime "updated_at",                                        :null => false
-    t.integer  "status",                :limit => 1, :default => 1
+    t.integer  "status",                :limit => 2, :default => 1
     t.integer  "hotness",                            :default => 0
   end
 
@@ -225,8 +225,8 @@ ActiveRecord::Schema.define(:version => 20140530201929) do
     t.string   "activation_hash"
     t.string   "ranks"
     t.integer  "reputation",                   :default => 0
-    t.integer  "status",          :limit => 1, :default => 0
-    t.integer  "role",            :limit => 1, :default => 0
+    t.integer  "status",          :limit => 2, :default => 0
+    t.integer  "role",            :limit => 2, :default => 0
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
     t.string   "apikey"
