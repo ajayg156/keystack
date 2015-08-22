@@ -6,7 +6,7 @@ en:
     edit:
       title: "Edit user"
       
-    new: "Sign in"
+    new: "Sign Up"
     successfully_created: "Created new account using "
     successfully_activated: "Thank you for confirming your email address. You can now use all the features of the site."
     send_to_email: "Send email"

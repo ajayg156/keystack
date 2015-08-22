@@ -315,13 +315,7 @@ a.ui_button.small {
 
 /* main error style */
 
-form .form_error {
-    padding:3px;
-    color:#FFFFFF;
-    background-color: #C03518;
-    border: 2px solid #8D220F;
-    text-align:center;
-}
+
 
 /* FORM BUTTONS */
 

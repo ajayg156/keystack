@@ -4,34 +4,33 @@
   </div>
   <div class="content">
     <%= form_for(@user) do |f| %>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, :required => true,:style => "height: 31px;" %>
       </div>
-      <div class="field">
-        <%= f.label :email %> &nbsp;
-        <span style="height:26px;line-height:26px;" class="small_font"> (<%= t("users.email_not_public") %>)</span>
-        <%= f.text_field :email %>
+      <div class="form-group">
+        <%= f.label :email %> 
+        <%= f.text_field :email,:required => true,:style => "height: 31px;" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :password %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password,:required => true,:style => "height: 31px;" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation,:required => true,:style => "height: 31px;" %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= f.simple_captcha %>
       </div>
-      <div class="field">
+      <div class="form-group">
         <%= t"users.agreement_note",:button=>t("users.new") %> <strong><%= link_to t('users.agreement_link'), privacy_url,:target=> '_blank' %></strong>
       </div>
       <div class="field">
         <%= field_messages_for @user %>
       </div>
       <div class="actions">
-        <%= f.submit t("users.new"), :class=>"ui_button" %>
+        <%= f.submit t("users.new"), :class=>"btn btn-primary" %>
       </div>
     <% end %>
   </div>
