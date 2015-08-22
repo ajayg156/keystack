@@ -24,8 +24,8 @@
   <%= render :partial => 'shared/flash_window' %>
   <div id="header">
     <div class="inner_header clear_wrapper">
-      <div class="left">
-        <%= link_to APP_CONFIG['display_app_name'],root_url, :class=>'logo' %>
+      <div class="left" style="margin-left: -15%;">
+        <a href="/"><img src="/assets/keystone.jpg" class="logo" width="150" height="100" ></a>
       </div>
       <div class="right">
         <%= render 'users/user_stuff' %>

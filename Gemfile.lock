@@ -38,6 +38,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    commonjs (0.2.7)
     daemons (1.1.9)
     dalli (2.7.2)
     erubis (2.7.0)
@@ -61,6 +62,11 @@ GEM
       activesupport (>= 2.0.0)
       json
     jwt (1.0.0)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.6.0)
+      actionpack (>= 3.1)
+      less (~> 2.6.0)
     libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -161,6 +167,11 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-bootstrap-rails (2.2.8)
+      actionpack (>= 3.1)
+      execjs
+      rails (>= 3.1)
+      railties (>= 3.1)
     tzinfo (0.3.39)
     uglifier (2.5.1)
       execjs (>= 0.3.0)
@@ -180,6 +191,7 @@ DEPENDENCIES
   httpclient
   jquery-rails
   json_builder
+  less-rails
   memcachier
   newrelic_rpm
   omniauth-facebook
@@ -194,5 +206,9 @@ DEPENDENCIES
   squeel
   therubyracer
   thin
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   will_paginate (~> 3.0)
+
+BUNDLED WITH
+   1.10.6
