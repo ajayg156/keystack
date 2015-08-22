@@ -1,17 +1,19 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+
 gem 'rails', '3.2.17'
 
 gem 'thin'
-gem 'pg'
+gem 'mysql2'
 gem 'squeel'
 gem 'memcachier'
 gem 'dalli'
 
 group :development do
   gem 'execjs'
-  gem 'therubyracer'
+  gem "therubyracer"
+  gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+  gem "twitter-bootstrap-rails"
 end
 
 group :production do

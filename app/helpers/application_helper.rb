@@ -22,12 +22,12 @@ module ApplicationHelper
     end
   end
 
-  def flash_form_messages(attr)
-    attr = (attr.to_s + "_error").to_sym
-    if flash[attr]
-      raw "<div class=\"form_error\">#{flash[attr]} </div>"
-    end
-  end
+  #def flash_form_messages(attr)
+   # attr = (attr.to_s + "_error").to_sym
+   # if flash[attr]
+   #   raw "<div class=\"form_error\">#{flash[attr]} </div>"
+   # end
+  #end
 
   def sortable(column, title = nil)
     title ||= column.titleize
