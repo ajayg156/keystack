@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.17'
 
 gem 'thin'
-gem 'mysql2'
+gem 'pg'
 gem 'squeel'
 gem 'memcachier'
 gem 'dalli'

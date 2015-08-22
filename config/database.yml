@@ -1,7 +1,7 @@
 development:
-  username: root
+  username: pguser
   password: Dragon16
-  adapter: mysql2
+  adapter: postgresql
   database: keystack_development
   host: localhost
 
@@ -9,15 +9,15 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  username: root
+  username: pguser
   password: Dragon16
-  adapter: mysql2
+  adapter: postgresql
   database: keystack_test
   host: localhost
 
 production:
-  username: root
+  username: pguser
   password: Dragon16
-  adapter: mysql2
+  adapter: postgresql
   database: keystack_prod
   host: localhost

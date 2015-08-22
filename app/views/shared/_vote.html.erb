@@ -1,13 +1,55 @@
+<style>
+  #myform {
+    text-align: center;
+    padding: 5px;
+    border: 1px dotted #ccc;
+    margin: 2%;
+}
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+input.qtyplus { width:25px; height:25px;}
+input.qtyminus { width:25px; height:25px;}
+</style>
 <div class="votes">
-  <span><%= object.vote_up if object.vote_up > 0 && can?(:vote_total,object) %></span>
-  <a title="głos na tak" class="plus <%= 'active' if current_user && object.voted?(current_user,'up') %>"
-     href="<%= url_for :controller=> object.class.name.downcase.pluralize, :action=>:vote, :id=>object.id, :vote=>'up' %>">
-  </a>
-  <div class="counter">
-    <%= object.vote_count %>
-  </div>
-  <a title="głos na nie" class="minus <%= 'active' if current_user && object.voted?(current_user,'down') %>"
-     href="<%= url_for :controller=> object.class.name.downcase.pluralize,:action=>:vote, :id=>object.id, :vote=>'down' %>">
-  </a>
-  <span><%= object.vote_down if object.vote_down > 0 && can?(:vote_total,object) %></span>
+<form id='myform' method='POST' action='#'>
+<input type='button' value='+' class='qtyplus' field='quantity' />
+<p></p>
+<input type='text' name='quantity' value='0' class='qty' />
+<input type='button' value='-' class='qtyminus' field='quantity' />    
+</form>
 </div>
+  
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    // This button will increment the value
+    $('.qtyplus').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If is not undefined
+        
+            // Increment
+            $('input[name='+fieldName+']').val(currentVal + 1);
+           
+    });
+    // This button will decrement the value till 0
+    $(".qtyminus").click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+       
+            // Decrement one
+            $('input[name='+fieldName+']').val(currentVal - 1);
+        
+    });
+});</script>
